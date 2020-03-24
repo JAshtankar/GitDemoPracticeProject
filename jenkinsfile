@@ -1,8 +1,8 @@
 pipeline {
   agent any
-  	stage('Build1') {
+  	stage('mvn') {
       steps {
-        docker { image 'node:7-alpine' }
+       sh 'mvn --version'
       }
     }
     stage('Build') {
